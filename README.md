@@ -1,4 +1,4 @@
-# Laravel FirstData Integration
+# Integration of FirstData in Laravel
 
 This package has tools to integrate firstdata payments in a laravel project.
 

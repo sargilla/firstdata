@@ -1,14 +1,22 @@
 {
     "name": "sargilla/firstdata",
-    "description": "Gestor de Productos de Estudio Rompecabezas Framework",
-    "type": "laravel",
-    "license": "MIT",
+    "description": "Integration of FirstData in Laravel",
+    "keywords": [
+        "firstdata",
+        "laravel",
+        "gateway",
+        "fiserv"
+    ],
     "authors": [
         {
             "name": "Santiago Argilla",
-            "email": "sargilla@gmail.com"
+            "email": "sargilla@gmail.com",
+            "homepage": "https://sargilla.com.ar",
+            "role": "Developer"
         }
     ],
+    "type": "laravel",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Sargilla\\Firstdata\\": "src"
@@ -19,7 +27,7 @@
 	        "providers": [
 	            "Sargilla\\Firstdata\\FirstdataServiceProvider"
 	        ],
-	        "aliases": {   
+	        "aliases": {
 	            "Firstdata": "Sargilla\\Firstdata\\Facades\\FirstdataFacade"
 	        }
 	    }
