@@ -1,0 +1,29 @@
+{
+    "name": "sargilla/firstdata",
+    "description": "Gestor de Productos de Estudio Rompecabezas Framework",
+    "type": "laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Santiago Argilla",
+            "email": "sargilla@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sargilla\\Firstdata\\": "src"
+        }
+    },
+    "extra": {
+	    "laravel": {
+	        "providers": [
+	            "Sargilla\\Firstdata\\FirstdataServiceProvider"
+	        ],
+	        "aliases": {   
+	            "Firstdata": "Sargilla\\Firstdata\\Facades\\FirstdataFacade"
+	        }
+	    }
+	},
+    "require": {
+    }
+}
