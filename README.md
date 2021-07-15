@@ -68,3 +68,49 @@ This is an example form to test the integration
 </body>
 </html>
 ```
+## Routes
+Recomended routes for responses
+
+```php
+Route::get('first-data', 'Payments\FirstDataController@showForm');
+Route::post('first-data/response/success', 'Payments\FirstDataController@success');
+Route::post('first-data/response/failure', 'Payments\FirstDataController@failure');
+Route::post('first-data/response/notification', 'Payments\FirstDataController@notification');
+```
+
+## Controller
+
+Recomended controller 
+```php
+namespace App\Http\Controllers\Payments;
+
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
+
+class FirstDataController {
+
+    public function success()
+    {
+        // PROCESS SUCCESS AND REDIRECT
+        Log::notice('OPERATION SUCCESS');
+        Log::info(request()->all());
+        dd(request()->all());
+    }
+
+    public function failure()
+    {
+        // PROCESS FAILURE AND REDIRECT
+        Log::notice('OPERATION FAILED');
+        Log::info(request()->all());
+        dd(request()->all());
+    }
+
+    public function notification()
+    {
+        // PROCESS NOTIFICATION
+        Log::notice('OPERATION NOTIFICATION');
+        Log::info(request()->all());
+        dd(request()->all());
+    }
+}
+```

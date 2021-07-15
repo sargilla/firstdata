@@ -19,7 +19,6 @@ class Firstdata
     }
 
     public function createExtendedHash($chargetotal, $currency, $invoice) {
-        // dd(config('firstdata.store_id'));
         $arrayToHash = [
             $chargetotal,
             $currency,
