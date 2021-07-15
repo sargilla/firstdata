@@ -47,25 +47,24 @@ This is an example form to test the integration
     <title>IPG Connect Sample for PHP</title>
 </head>
 <body>
-    <p>
-        <h1>Order Form</h1>
-        <form method="post" action="{{config('firstdata.form_url')}}">
-            <input type="hidden" name="txntype" value="sale">
-            <input type="hidden" name="timezone" value="{{config('firstdata.timezone')}}" />
-            <input type="hidden" name="txndatetime" value="{{ Firstdata::getDateTime() }}" />
-            <input type="hidden" name="hash_algorithm"  value="HMACSHA256" />
-            <input type="hidden" name="hashExtended" value="{{ Firstdata::createExtendedHash('13.00','032','50') }}" />
-            <input type="hidden" name="storename" value="{{ config('firstdata.store_id') }}" />
-            <input type="hidden" name="mode" value="payonly" />
-            <input type="hidden" name="paymentMethod" value="M" />
-            <input type="hidden" name="chargetotal" value="13.00" />
-            <input type="hidden" name="currency" value="032" />
-            <input type="hidden" name="invoicenumber" value="50" />
-            <input type="hidden" name="responseFailURL" value="{{ config('firstdata.response_failure') }}" />
-            <input type="hidden" name="responseSuccessURL" value="{{ config('firstdata.response_success') }}" />
-            <input type="hidden" name="transactionNotificationURL" value="{{ config('firstdata.response_notification') }}" />
-            <input type="submit" value="Submit">
-        </form>
+    <h1>Order Form</h1>
+    <form method="post" action="{{config('firstdata.form_url')}}">
+        <input type="hidden" name="txntype" value="sale">
+        <input type="hidden" name="timezone" value="{{config('firstdata.timezone')}}" />
+        <input type="hidden" name="txndatetime" value="{{ Firstdata::getDateTime() }}" />
+        <input type="hidden" name="hash_algorithm"  value="HMACSHA256" />
+        <input type="hidden" name="hashExtended" value="{{ Firstdata::createExtendedHash('13.00','032','50') }}" />
+        <input type="hidden" name="storename" value="{{ config('firstdata.store_id') }}" />
+        <input type="hidden" name="mode" value="payonly" />
+        <input type="hidden" name="paymentMethod" value="M" />
+        <input type="hidden" name="chargetotal" value="13.00" />
+        <input type="hidden" name="currency" value="032" />
+        <input type="hidden" name="invoicenumber" value="50" />
+        <input type="hidden" name="responseFailURL" value="{{ config('firstdata.response_failure') }}" />
+        <input type="hidden" name="responseSuccessURL" value="{{ config('firstdata.response_success') }}" />
+        <input type="hidden" name="transactionNotificationURL" value="{{ config('firstdata.response_notification') }}" />
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
 ```
